@@ -803,3 +803,67 @@ Completed in 8ms (DB: 0) | 302 Found [http://localhost/items/11]
 Processing ItemsController#index to xml (for 127.0.0.1 at 2011-05-15 22:37:38) [GET]
   [4;35;1mItem Load (0.9ms)[0m   [0mSELECT * FROM "items" [0m
 Completed in 81ms (View: 77, DB: 1) | 200 OK [http://localhost/items.xml]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2011-05-15 22:56:24) [GET]
+  [4;36;1mItem Load (1.0ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 38ms (View: 31, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2011-05-16 20:35:10) [GET]
+  [4;35;1mItem Load (0.9ms)[0m   [0mSELECT * FROM "items" [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 34ms (View: 30, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#index (for 127.0.0.1 at 2011-05-16 20:40:20) [GET]
+  [4;36;1mItem Load (0.9ms)[0m   [0;1mSELECT * FROM "items" [0m
+Rendering template within layouts/items
+Rendering items/index
+Completed in 35ms (View: 30, DB: 1) | 200 OK [http://localhost/items]
+
+
+Processing ItemsController#edit (for 127.0.0.1 at 2011-05-16 20:40:21) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mItem Load (0.2ms)[0m   [0mSELECT * FROM "items" WHERE ("items"."id" = 2) [0m
+Rendering template within layouts/items
+Rendering items/edit
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/items/2/edit]
+
+
+Processing ItemsController#update (for 127.0.0.1 at 2011-05-16 20:40:23) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"1/NSgLvceVIyYuUBfv6GCPeE1Hn2fApsXZES5oGfOPo=", "id"=>"2", "item"=>{"name"=>"", "x"=>"", "y"=>"", "id"=>"2"}}
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items"."id" = 2) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Rendering template within layouts/items
+Rendering items/edit
+Completed in 268ms (View: 261, DB: 0) | 200 OK [http://localhost/items/2]
+
+
+Processing ItemsController#update (for 127.0.0.1 at 2011-05-16 20:40:32) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"1/NSgLvceVIyYuUBfv6GCPeE1Hn2fApsXZES5oGfOPo=", "id"=>"2", "item"=>{"name"=>"", "x"=>"3", "y"=>"88", "id"=>"2"}}
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM "items" WHERE ("items"."id" = 2) [0m
+WARNING: Can't mass-assign these protected attributes: id
+Rendering template within layouts/items
+Rendering items/edit
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/items/2]
+
+
+Processing ItemsController#update (for 127.0.0.1 at 2011-05-16 20:40:37) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"1/NSgLvceVIyYuUBfv6GCPeE1Hn2fApsXZES5oGfOPo=", "id"=>"2", "item"=>{"name"=>"item5", "x"=>"3", "y"=>"88", "id"=>"2"}}
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items"."id" = 2) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mItem Update (0.3ms)[0m   [0mUPDATE "items" SET "updated_at" = '2011-05-16 18:40:37', "y" = 88, "x" = 3, "name" = 'item5' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/items/2
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/items/2]
+
+
+Processing ItemsController#show (for 127.0.0.1 at 2011-05-16 20:40:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mItem Load (0.2ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items"."id" = 2) [0m
+Rendering template within layouts/items
+Rendering items/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/items/2]
